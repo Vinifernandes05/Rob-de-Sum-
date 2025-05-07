@@ -1,3 +1,4 @@
+```cpp
 #include <Ultrasonic.h>
 
 // --- DEFINIÇÕES DE PINOS ---
@@ -106,13 +107,15 @@ void loop() {
   Serial.print("Trás: "); Serial.println(linhaTras);
   delay(100);
 
- /* if (linhaFrente == LOW) {
+  // Descomente para ativar o sensor frontal
+  /* if (linhaFrente == LOW) {
     Serial.print("Frente: ligando "); Serial.println(linhaFrente);
     tras();
     delay(400);
     esquerda();
     delay(300);
-  }*/
+  } */
+  
   if (linhaTras == LOW) {
     frente();
     delay(200);
@@ -128,3 +131,4 @@ void loop() {
     esquerda(); // Gira procurando oponente
   }
 }
+```
